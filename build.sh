@@ -1,0 +1,11 @@
+# gcc -Os -I. -DSQLITE_THREADSAFE=0 -DSQLITE_ENABLE_FTS4 \
+#    -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_JSON1 \
+#    -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_EXPLAIN_COMMENTS \
+#    -DHAVE_READLINE \
+#    shell.c sqlite3.c -dynamiclib -ldl -lm -lreadline -lncurses -o sqlite3.dylib
+
+gcc -Os -I. -DSQLITE_THREADSAFE=0 -DSQLITE_ENABLE_FTS4 \
+   -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_JSON1 \
+   -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_EXPLAIN_COMMENTS \
+   -DHAVE_READLINE \
+   shell.c sqlite3.c -ldl -lm -lreadline -lncurses -o sqlite3
